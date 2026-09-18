@@ -91,45 +91,7 @@ ip dhcp pool SALES-POOL
 ip routing
 end
 write memory
-##⚙️ Switch Configuration
-enable
-configure terminal
-hostname Switch1
 
-vlan 10
- name HR
-exit
-vlan 20
- name IT
-exit
-vlan 30
- name Sales
-exit
-vlan 40
- name Server
-exit
-
-interface range FastEthernet0/1 - 4
- switchport mode access
- switchport access vlan 10
- exit
-
-interface range FastEthernet0/5 - 8
- switchport mode access
- switchport access vlan 20
- exit
-
-interface GigabitEthernet0/1
- switchport trunk encapsulation dot1q
- switchport mode trunk
- switchport trunk allowed vlan all
- exit
-
-interface GigabitEthernet0/2
- switchport trunk encapsulation dot1q
- switchport mode trunk
- switchport trunk allowed vlan all
- exit
 
 end
 write memory
