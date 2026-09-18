@@ -91,7 +91,3 @@ ip dhcp pool SALES-POOL
 ip routing
 end
 write memory
-
-
-end
-write memory
