@@ -91,6 +91,7 @@ ip dhcp pool SALES-POOL
 ip routing
 end
 write memory
+##⚙️ Switch Configuration
 enable
 configure terminal
 hostname Switch1
